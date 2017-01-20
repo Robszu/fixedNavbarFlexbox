@@ -33,8 +33,9 @@ body {
   margin: auto;
 }
 
-.page-nav ul a {
+.page-nav a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 .page-nav ul li {
