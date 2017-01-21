@@ -60,6 +60,7 @@ Morbi blandit egestas eros, et aliquet mi finibus sed. Ut quis libero et ex aliq
       const body = document.querySelector('body');
       const hamburger = document.querySelector('.hamburger');
       const pageNav = document.querySelector('.page-nav ul');
+      const menuLinks = pageNav.querySelectorAll('a');
       let toggle = false;
       hamburger.addEventListener('click', () => {
         toggle = !toggle;
@@ -71,6 +72,21 @@ Morbi blandit egestas eros, et aliquet mi finibus sed. Ut quis libero et ex aliq
           body.classList.remove('open-nav');
         }
       });
+
+      menuLinks.forEach(link => link.addEventListener('click', () => {
+        toggle = !toggle;
+        pageNav.classList.remove('open');
+        body.classList.remove('open-nav');
+      }) );
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
