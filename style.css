@@ -12,17 +12,20 @@ body {
   background-color: #666666;
   color: #ffffff;
   font-size: 22px;
+  padding-top: 90px;
+}
+
+.page-wrapper {
+
 }
 
 .page-nav {
   background-color: #000000;
   position: fixed;
+  top: 0;
   width: 100%;
   text-align: center;
-  border: 1px solid red;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
+  padding: 15px;
 }
 
 .page-nav ul {
@@ -47,6 +50,21 @@ body {
   flex-grow: 2;
 }
 
+.page-nav ul li:first-child a {
+  color: #ff0000;
+}
+
+.hamburger {
+  background-color: #333333;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 30px;
+  display: none;
+}
+
+.content {
+
+}
 
 
 
