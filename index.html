@@ -14,19 +14,19 @@
         <a href="#" class="hamburger">☰</a>
         <ul>
           <li>
-            <a href="#">Your logo</a>
+            <a href="#"><span>Your logo</span></a>
           </li>
           <li>
-            <a href="#">Home</a>
+            <a href="#"><span>Home</span></a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#"><span>About</span></a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="#"><span>Portfolio</span></a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#"><span>Contact</span></a>
           </li>
         </ul>
       </nav>
@@ -60,7 +60,7 @@ Morbi blandit egestas eros, et aliquet mi finibus sed. Ut quis libero et ex aliq
       const body = document.querySelector('body');
       const hamburger = document.querySelector('.hamburger');
       const pageNav = document.querySelector('.page-nav ul');
-      const menuLinks = pageNav.querySelectorAll('a');
+      const menuLinks = pageNav.querySelectorAll('li a');
       let toggle = false;
       hamburger.addEventListener('click', () => {
         toggle = !toggle;
@@ -79,14 +79,13 @@ Morbi blandit egestas eros, et aliquet mi finibus sed. Ut quis libero et ex aliq
         body.classList.remove('open-nav');
       }) );
 
+      menuLinks.forEach(link => link.addEventListener('mouseover', (e) => {
+        menuLinks.forEach(a => a.classList.add('menu-hover'));
+      }));
 
-
-
-
-
-
-
-
+      menuLinks.forEach(link => link.addEventListener('mouseleave', (e) => {
+        menuLinks.forEach(a => a.classList.remove('menu-hover'));
+      }))
     </script>
   </body>
 </html>

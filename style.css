@@ -15,10 +15,6 @@ body {
   padding-top: 90px;
 }
 
-.page-wrapper {
-
-}
-
 .page-nav {
   background-color: #000000;
   position: fixed;
@@ -30,21 +26,12 @@ body {
 
 .page-nav ul {
   list-style: none;
-  display: -ms-flexbox;
   display: flex;
   max-width: 1000px;
   margin: auto;
 }
 
-.page-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: all .2s;
-  opacity: .9;
-}
-
-.page-nav ul li:not(:first-child) a:hover {
-  display: inline-block;
+.page-nav ul li a:hover {
   transform: scale(1.2);
   opacity: 1;
 }
@@ -52,6 +39,26 @@ body {
 .page-nav ul li {
   flex: 1;
   padding: 10px;
+  display: flex;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all .3s;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.page-nav a.menu-hover {
+  opacity: .5;
+}
+
+.page-nav span {
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 .page-nav ul li:first-child {
@@ -61,11 +68,12 @@ body {
 
 .page-nav ul li:first-child a {
   color: #ff0000;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
+  margin-left: -60px;
 }
 
-.hamburger {
+.page-nav .hamburger {
   background-color: #333333;
   padding: 2px;
   border-radius: 4px;
@@ -84,10 +92,6 @@ body {
 
 h1 {
   text-align: center;
-}
-
-a {
-
 }
 
 @media (max-width: 768px) {
@@ -112,7 +116,7 @@ a {
     display: none;
   }
 
-  .hamburger {
+  .page-nav .hamburger {
     display: block;
 
   }
