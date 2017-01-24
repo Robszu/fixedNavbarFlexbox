@@ -114,6 +114,7 @@ h1 {
   .page-nav ul {
     flex-direction: column;
     display: none;
+    padding: 0;
   }
 
   .page-nav .hamburger {
